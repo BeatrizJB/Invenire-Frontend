@@ -6,17 +6,17 @@ const baseURL = `${process.env.REACT_APP_SERVER_HOSTNAME}/api`;
 
 /* PROJECT ROUTES */
 
- export const getAllInventories = () => {
-   return axios.get(`${baseURL}/home`);
+ export const getAllLists = () => {
+   return axios.get(`${baseURL}/list`);
  };
 
-// export const addProject = (project) => {
-//   return axios.post(`${baseURL}/projects`, project);
-// };
+export const createInventory = (list) => {
+  return axios.post(`${baseURL}/list`, list);
+};
 
- export const getItem = (itemId) => {
-   return axios.get(`${baseURL}/home/${itemId}`);
- };
+//  export const getItem = (itemId) => {
+//    return axios.get(`${baseURL}/home/${itemId}`);
+//  };
 
 // export const deleteProject = (projectId) => {
 //   return axios.delete(`${baseURL}/projects/${projectId}`);
@@ -26,9 +26,9 @@ const baseURL = `${process.env.REACT_APP_SERVER_HOSTNAME}/api`;
 //   return axios.put(`${baseURL}/projects/${updatedProject.id}`, updatedProject);
 // };
 
-// export const uploadFile = (uploadData) => {
-//   return axios.post(`${baseURL}/upload`, uploadData);
-// };
+export const uploadFile = (uploadData) => {
+  return axios.post(`${baseURL}/upload`, uploadData);
+};
 
 // AUTH API ROUTES
 
