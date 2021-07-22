@@ -32,14 +32,14 @@ export const uploadFile = (uploadData) => {
 
 // AUTH API ROUTES
 
-// export const signup = (user) => {
-//   return axios.post(`${baseURL}/signup`, user);
-// };
+export const signup = (user) => {
+  return axios.post(`${baseURL}/signup`, user);
+};
 
-// export const login = (user) => {
-//   return axios.post(`${baseURL}/login`, user);
-// };
+export const login = (user) => {
+  return axios.post(`${baseURL}/login`, user);
+};
 
-// export const logout = (user) => {
-//   return axios.post(`${baseURL}/logout`, user);
-// };
+export const logout = (user) => {
+  return axios.post(`${baseURL}/logout`, user);
+};
