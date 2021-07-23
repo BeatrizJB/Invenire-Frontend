@@ -37,7 +37,10 @@ export const signup = (user) => {
 };
 
 export const login = (user) => {
-  return axios.post(`${baseURL}/login`, user);
+  return axios.post(`${baseURL}/login`, user, { withCredentials: true });
+};
+export const loggedIn = () => {
+  return axios.get(`${baseURL}/loggedin`, { withCredentials: true });
 };
 
 export const logout = (user) => {

@@ -1,5 +1,6 @@
 import React from "react";
 import { signup } from "../api";
+import { NavLink } from "react-router-dom";
 import { toast } from "react-toastify";
 
 class Signup extends React.Component {
@@ -47,6 +48,9 @@ class Signup extends React.Component {
           <button type="submit">Signup</button>
         </form>
 
+        <p>
+          Already have an account? <NavLink to="/login">Login</NavLink>
+        </p>
       </>
     );
   }

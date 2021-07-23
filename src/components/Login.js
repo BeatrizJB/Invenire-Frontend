@@ -1,6 +1,7 @@
 import React from "react";
 import { login } from "../api";
 import { toast } from "react-toastify";
+import { NavLink } from "react-router-dom";
 
 class Login extends React.Component {
   state = {
@@ -48,6 +49,9 @@ class Login extends React.Component {
           <button type="submit">Login</button>
         </form>
 
+        <p>
+          Don't have an account? <NavLink to="/signup">Signup</NavLink>
+        </p>
       </>
     );
   }
