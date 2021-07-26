@@ -30,27 +30,41 @@ class Signup extends React.Component {
     const { username, password } = this.state;
     return (
       <>
-        <form onSubmit={this.handleFormSubmit}>
-          <label>Username</label>
-          <input
-            type="text"
-            name="username"
-            onChange={this.handleChange}
-            value={username}
-          />
-          <label>Password</label>
-          <input
-            type="password"
-            name="password"
-            onChange={this.handleChange}
-            value={password}
-          />
-          <button type="submit">Signup</button>
-        </form>
+        <section className="Auth">
+          <div>
+            <form onSubmit={this.handleFormSubmit}>
+              <div className="Fillauth">
+                <label>Username</label>
+                <input
+                  type="text"
+                  name="username"
+                  onChange={this.handleChange}
+                  value={username}
+                />
+              </div>
 
-        <p>
-          Already have an account? <NavLink to="/login">Login</NavLink>
-        </p>
+              <div className="Fillauth">
+                <label>Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  onChange={this.handleChange}
+                  value={password}
+                />
+              </div>
+              <div>
+                <button className="butts" type="submit">
+                  Sign Up
+                </button>
+              </div>
+            </form>
+            <div className="Donthave">
+              <p>
+                <NavLink to="/login">Already have an account?</NavLink>
+              </p>
+            </div>
+          </div>
+        </section>
       </>
     );
   }

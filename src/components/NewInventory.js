@@ -1,5 +1,5 @@
 import React from "react";
-import { createInventory } from "../api";
+import { newInventory } from "../api";
 import { toast } from "react-toastify";
 
 class CreateInventory extends React.Component {
@@ -22,9 +22,9 @@ class CreateInventory extends React.Component {
       items: this.state.items,
     };
 
-    await createInventory(newList);
+    await newInventory(newList);
 
-    toast.success("Project created");
+    toast.success("Inventory created");
     this.props.history.push("/home");
   };
 
@@ -48,7 +48,9 @@ class CreateInventory extends React.Component {
             name="items"
             value={items}
           />
-          <button type="submit">Create</button>
+          <button className="butts" type="submit">
+            Create
+          </button>
         </form>
       </>
     );

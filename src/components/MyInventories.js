@@ -1,37 +1,36 @@
 import React from "react";
-import { getAllLists } from "../api";
+import { myInventories } from "../api";
 import { NavLink } from "react-router-dom";
 
-class Lists extends React.Component {
+class Inventories extends React.Component {
   state = {
-    masterList: [],
+    allInv: [],
   };
 
   async componentDidMount() {
-    const response = await getAllLists();
+    const response = await myInventories();
     this.setState({
-      masterList: response.data,
+      allInv: response.data,
     });
   }
 
   render() {
     return (
       <>
-        <h2>List of Projects</h2>
-        <ul>
-          {this.state.masterList.map((list) => {
+        <h2>My Inventories</h2>
+        <div>
+          {this.state.allInv.map((inv) => {
             return (
-              <li key={list._id}>
-              <p>{list.title}</p>
-                <NavLink to={`/projects/${list._id}`}>
-                </NavLink>
-              </li>
+              <h3 key={inv._id}>
+                <p>{inv.title}</p>
+                <NavLink to={``}></NavLink>
+              </h3>
             );
           })}
-        </ul>
+        </div>
       </>
     );
   }
 }
 
-export default Lists;
+export default Inventories;

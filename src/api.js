@@ -6,25 +6,35 @@ const baseURL = `${process.env.REACT_APP_SERVER_HOSTNAME}/api`;
 
 /* PROJECT ROUTES */
 
- export const getAllLists = () => {
-   return axios.get(`${baseURL}/list`);
+ export const myInventories = () => {
+   return axios.get(`${baseURL}/myinventories`);
  };
 
-export const createInventory = (list) => {
-  return axios.post(`${baseURL}/list`, list);
+  export const inventory = (invId) => {
+    return axios.get(`${baseURL}/myinventories/${invId}`);
+  };
+
+export const newInventory = () => {
+  return axios.post(`${baseURL}/newinventory`);
 };
 
-//  export const getItem = (itemId) => {
-//    return axios.get(`${baseURL}/home/${itemId}`);
-//  };
+export const updateTitle = (invId) => {
+  return axios.put(`${baseURL}/myinventories/${invId}`);
+};
 
-// export const deleteProject = (projectId) => {
-//   return axios.delete(`${baseURL}/projects/${projectId}`);
-// };
+export const createItem = (invId) => {
+  return axios.put(`${baseURL}/myinventories/addItems/${invId}`);
+};
 
-// export const updateProject = (updatedProject) => {
-//   return axios.put(`${baseURL}/projects/${updatedProject.id}`, updatedProject);
-// };
+export const editItem = (invId, itemId) => {
+  return axios.put(`${baseURL}/myinventories/${invId}/addSpecs/${itemId}`);
+};
+
+export const deleteInventory = (invId) => {
+  return axios.delete(`${baseURL}/myinventories/deleteinventory/${invId}`);
+};
+
+
 
 export const uploadFile = (uploadData) => {
   return axios.post(`${baseURL}/upload`, uploadData);
@@ -39,10 +49,11 @@ export const signup = (user) => {
 export const login = (user) => {
   return axios.post(`${baseURL}/login`, user, { withCredentials: true });
 };
+
 export const loggedIn = () => {
   return axios.get(`${baseURL}/loggedin`, { withCredentials: true });
 };
 
-export const logout = (user) => {
-  return axios.post(`${baseURL}/logout`, user);
+export const logout = () => {
+  return axios.post(`${baseURL}/logout`, null, { withCredentials: true });
 };

@@ -9,34 +9,51 @@ function Navbar({ loggedInUser, setLoggedInUser }) {
   };
   return loggedInUser ? (
     <>
-      <p>Welcome {loggedInUser.username}</p>
-      <ul>
-        <li>
-          <NavLink to="/">
-            <button onClick={logoutUser}>Logout</button>
-          </NavLink>
-        </li>
-        <li>
-          <NavLink activeStyle={{ color: "red" }} exact to="list">
-            My Inventories
-          </NavLink>
-        </li>
-        <li>
-          <NavLink activeStyle={{ color: "red" }} to="">
-            Add Project
-          </NavLink>
-        </li>
-      </ul>
+      <div>
+        <div>
+          <p>Welcome</p>
+          <p>{loggedInUser.username}</p>
+        </div>
+        <div>
+          <p>
+            <NavLink activeStyle={{ color: "red" }} exact to="list">
+              My Inventories
+            </NavLink>
+          </p>
+        </div>
+        <div>
+          <p>
+            <NavLink to="/">
+              <button className="butts" onClick={logoutUser}>Logout</button>
+            </NavLink>
+          </p>
+        </div>
+      </div>
     </>
   ) : (
-    <ul>
-      <li>
-        <NavLink activeStyle={{ color: "red" }} exact to="/">
-          Home
-        </NavLink>
-      </li>
-
-    </ul>
+    <div>
+      <div>
+        <p>
+          <NavLink activeStyle={{ color: "green" }} exact to="/">
+            Home
+          </NavLink>
+        </p>
+      </div>
+      <div>
+        <p>
+          <NavLink activeStyle={{ color: "green" }} exact to="/signup">
+            Sign Up
+          </NavLink>
+        </p>
+      </div>
+      <div>
+        <p>
+          <NavLink activeStyle={{ color: "green" }} exact to="/login">
+            Login
+          </NavLink>
+        </p>
+      </div>
+    </div>
   );
 }
 export default Navbar;

@@ -1,33 +1,30 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 function Home() {
   return (
     <>
-      <section>
-        <h1>Invenire</h1>
-        <article>Project concept</article>
-        <div>
-          <ol>
+      <div className="Home">
+        <secttion>
+          <h1>Invenire</h1>
+        </secttion>
+        <section>
+          <h2>Concept</h2>
+          <article>concept forever</article>
+        </section>
+        <section>
+          <div>
             <p>How to use</p>
-            <li>set1</li>
-            <li>set2</li>
-            <li>set3</li>
-            <li>set4</li>
-          </ol>
-        </div>
-        <div>
-          <h4>Directory</h4>
-          <p>
-            Don't have an account? <NavLink to="/signup">Signup</NavLink>
-          </p>
-          <p>
-            Already have an account? <NavLink to="/login">Login</NavLink>
-          </p>
-        </div>
-      </section>
+          </div>
+          <div>
+            <p>set1</p>
+            <p>set2</p>
+            <p>set3</p>
+            <p>set4</p>
+          </div>
+        </section>
+      </div>
     </>
   );
-};
+}
 
 export default Home;

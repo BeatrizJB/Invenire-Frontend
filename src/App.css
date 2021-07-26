@@ -36,3 +36,86 @@
     transform: rotate(360deg);
   }
 }
+
+/* NAVBAR BEGIN --------------------------------------- */
+
+.Directory {
+  width: 10%;
+  height: 80%;
+  float: left;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+/* NAVBAR END --------------------------------------- */
+
+/* HOME PAGE BEGIN --------------------------------------- */
+
+.Home {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+/* HOME PAGE END --------------------------------------- */
+
+/* BUTTONS BEGIN --------------------------------------- */
+
+button {
+  margin-top: 10%;
+  padding: 5%;
+  width: 40%;
+  height: 15%;
+  border-radius: 50%;
+}
+
+.butts {
+  background: transparent;
+  border: 1px solid #F3E5F5 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  cursor: pointer;
+  transition: transform .2s ease-out;
+}
+
+.butts:hover {
+  background-color: black;
+  color: white;
+}
+/* BUTTONS END --------------------------------------- */
+
+/* AUTH BEGIN -----------------------------------------*/
+
+.Auth {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin: 10%;
+}
+
+.Fillauth {
+  width: 80%;
+  margin: 20%;
+  padding-top: 10%;
+}
+
+.Auth button {
+  margin-left: 40%;
+}
+
+.Donthave {
+  padding-top: 10%;
+  padding-left: 5%
+}
+
+/* AUTH BEGIN -----------------------------------------*/
