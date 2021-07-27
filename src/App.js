@@ -11,19 +11,6 @@ import { Route, Switch } from "react-router-dom";
 import { loggedIn } from "./api";
 import React from "react";
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <Switch>
-
-//         <Route exact path="/signup" component={Signup} />
-//         <Route exact path="/login" component={Login} />
-//       </Switch>
-//     </div>
-//   );
-// }
-
-// export default App;
 
 class App extends React.Component {
   state = {
@@ -57,14 +44,6 @@ class App extends React.Component {
         </div>
 
         <Switch>
-          {/* <Route exact path={["/", "/projects"]} component={ListProjects} />
-          <PrivateRoute exact path="/projects/add" component={AddProject} />
-          <Route exact path="/projects/:id" component={ProjectDetails} />
-          <PrivateRoute
-            exact
-            path="/projects/:id/edit"
-            component={UpdateProject}
-          /> */}
           <div >
             <Route exact path="/" component={Home} />
             <Route exact path="/myinventories" component={Inventories} />
@@ -86,4 +65,3 @@ class App extends React.Component {
   }
 }
 export default App;
-

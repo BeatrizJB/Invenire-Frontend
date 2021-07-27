@@ -21,7 +21,7 @@ class Login extends React.Component {
       const user = await login(this.state);
       this.props.setLoggedInUser(user.data);
       toast.success("Login successful");
-      this.props.history.push("/");
+      this.props.history.push("/myinventories");
     } catch (e) {
       toast.error("Invalid login");
       console.log(e);
@@ -32,10 +32,10 @@ class Login extends React.Component {
     const { username, password } = this.state;
     return (
       <>
-        <section className="Auth">
+        <section className="Form">
           <div>
             <form onSubmit={this.handleFormSubmit}>
-              <div className="Fillauth">
+              <div className="Fill">
                 <label>Username</label>
                 <input
                   type="text"
@@ -44,7 +44,7 @@ class Login extends React.Component {
                   value={username}
                 />
               </div>
-              <div className="Fillauth">
+              <div className="Fill">
                 <label>Password</label>
                 <input
                   type="password"
@@ -60,10 +60,9 @@ class Login extends React.Component {
               </div>
             </form>
           </div>
-
           <div className="Donthave">
-            <p >
-               <NavLink to="/signup">Don't have an account?</NavLink>
+            <p>
+              <NavLink to="/signup">Don't have an account?</NavLink>
             </p>
           </div>
         </section>

@@ -16,8 +16,8 @@ export const inventory = (invId) => {
 
 //get items list
 
-export const newInventory = () => {
-  return axios.post(`${baseURL}/newinventory`);
+export const newInventory = (newInv) => {
+  return axios.post(`${baseURL}/newinventory`, newInv);
 };
 
 export const updateTitle = (invId) => {

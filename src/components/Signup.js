@@ -30,10 +30,10 @@ class Signup extends React.Component {
     const { username, password } = this.state;
     return (
       <>
-        <section className="Auth">
+        <section className="Form">
           <div>
             <form onSubmit={this.handleFormSubmit}>
-              <div className="Fillauth">
+              <div className="Fill">
                 <label>Username</label>
                 <input
                   type="text"
@@ -43,7 +43,7 @@ class Signup extends React.Component {
                 />
               </div>
 
-              <div className="Fillauth">
+              <div className="Fill">
                 <label>Password</label>
                 <input
                   type="password"
@@ -58,12 +58,13 @@ class Signup extends React.Component {
                 </button>
               </div>
             </form>
+            </div>
             <div className="Donthave">
               <p>
                 <NavLink to="/login">Already have an account?</NavLink>
               </p>
             </div>
-          </div>
+          
         </section>
       </>
     );

@@ -17,6 +17,7 @@ class Inventories extends React.Component {
   render() {
     return (
       <>
+      <section>
         <h2>My Inventories</h2>
         <div>
           {this.state.allInv.map((inv) => {
@@ -28,6 +29,7 @@ class Inventories extends React.Component {
             );
           })}
         </div>
+        </section>
       </>
     );
   }

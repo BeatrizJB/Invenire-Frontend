@@ -1,13 +1,10 @@
 import React from "react";
-import { newInventory, createItem } from "../api";
+import { newInventory } from "../api";
 import { toast } from "react-toastify";
 
 class CreateInventory extends React.Component {
   state = {
     title: "",
-    items: [{
-      designation: ""
-    }],
   };
 
   handleChange = (event) => {
@@ -24,29 +21,36 @@ class CreateInventory extends React.Component {
     };
 
     await newInventory(newInv);
-    console.log(newInv)
+    console.log(newInv);
     toast.success("Inventory created");
-    this.props.history.push("/");
+    this.props.history.push("/myinventories");
   };
 
   render() {
     const { title } = this.state;
     return (
       <>
-        <h2>Add Project</h2>
-        <form onSubmit={this.handleFormSubmit}>
-          <label>Title</label>
-          <input
-            type="text"
-            onChange={this.handleChange}
-            name="title"
-            value={title}
-          />
-          
-          <button className="butts" type="submit">
-            Create
-          </button>
-        </form>
+        <section className="Form">
+          <div>
+            <h2>New Inventory</h2>
+            <form onSubmit={this.handleFormSubmit}>
+              <div className="Fill">
+                <label>Title</label>
+                <input
+                  type="text"
+                  onChange={this.handleChange}
+                  name="title"
+                  value={title}
+                />
+              </div>
+              <div>
+                <button className="butts" type="submit">
+                  Create
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
       </>
     );
   }

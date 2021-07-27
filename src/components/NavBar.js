@@ -24,7 +24,7 @@ function Navbar({ loggedInUser, setLoggedInUser }) {
         <div>
           <p>
             <NavLink activeStyle={{ color: "red" }} exact to="/newinventory">
-              My Inventories
+              New Inventory
             </NavLink>
           </p>
         </div>

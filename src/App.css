@@ -41,7 +41,7 @@
 
 .Directory {
   width: 10%;
-  height: 80%;
+  height: 70%;
   float: left;
   margin-top: 10%;
   margin-bottom: 10%;
@@ -52,13 +52,42 @@
 /* HOME PAGE BEGIN --------------------------------------- */
 
 .Home {
-  width: 90%;
+  width: 80%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   justify-items: center;
   align-items: center;
+  text-align: center;
+}
+
+.Home h1 {
+  padding-top: 40%;
+  padding-bottom: 40%;
+}
+
+.Link2Def {
+  text-align: left;
+  margin-left: 20%;
+}
+
+.TextBox1 {
+  text-align: justify;
+  padding: 0 15% 0 15%;
+  margin: 0 5% 5% 5%;
+}
+
+.TextBox2 {
+  margin: 5%;
+  text-align: justify;
+  padding: 0 30% 0 30%;
+}
+
+.Howto {
+ text-align: justify;
+ font-size: 80%;
+ margin-bottom: 5%;
 }
 
 /* HOME PAGE END --------------------------------------- */
@@ -91,31 +120,33 @@ button {
 /* BUTTONS END --------------------------------------- */
 
 /* AUTH BEGIN -----------------------------------------*/
-
-.Auth {
+.Form {
   width: 80%;
-  height: 100%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   justify-items: center;
   align-items: center;
-  margin: 10%;
+  margin-top: 9%;
+  border: 1px solid red;
 }
 
-.Fillauth {
+.Fill {
   width: 80%;
   margin: 20%;
   padding-top: 10%;
+  border: 1px solid orange;
 }
 
-.Auth button {
+.Form button {
   margin-left: 40%;
 }
 
-.Donthave {
-  padding-top: 10%;
-  padding-left: 5%
-}
 
-/* AUTH BEGIN -----------------------------------------*/
+.Donthave {
+  margin-top: 5%;
+  margin-left: 5%;
+  border: 1px solid green;
+}
+/* AUTH END -----------------------------------------*/
