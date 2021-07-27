@@ -6,13 +6,15 @@ const baseURL = `${process.env.REACT_APP_SERVER_HOSTNAME}/api`;
 
 /* PROJECT ROUTES */
 
- export const myInventories = () => {
-   return axios.get(`${baseURL}/myinventories`);
- };
+export const myInventories = () => {
+  return axios.get(`${baseURL}/myinventories`);
+};
 
-  export const inventory = (invId) => {
-    return axios.get(`${baseURL}/myinventories/${invId}`);
-  };
+export const inventory = (invId) => {
+  return axios.get(`${baseURL}/myinventories/${invId}`);
+};
+
+//get items list
 
 export const newInventory = () => {
   return axios.post(`${baseURL}/newinventory`);
@@ -23,18 +25,26 @@ export const updateTitle = (invId) => {
 };
 
 export const createItem = (invId) => {
-  return axios.put(`${baseURL}/myinventories/addItems/${invId}`);
+  return axios.put(`${baseURL}/myinventories/additems/${invId}`);
 };
 
 export const editItem = (invId, itemId) => {
-  return axios.put(`${baseURL}/myinventories/${invId}/addSpecs/${itemId}`);
+  return axios.put(`${baseURL}/myinventories/${invId}/edititem/${itemId}`);
+};
+
+export const itemSpecs = (invId, itemId) => {
+  return axios.put(`${baseURL}/myinventories/${invId}/additemspecs/${itemId}`);
 };
 
 export const deleteInventory = (invId) => {
   return axios.delete(`${baseURL}/myinventories/deleteinventory/${invId}`);
 };
 
+export const deleteItem = (invId) => {
+  return axios.delete(`${baseURL}/myinventories/removeitem/${invId}`);
+};
 
+//delete items specs only
 
 export const uploadFile = (uploadData) => {
   return axios.post(`${baseURL}/upload`, uploadData);

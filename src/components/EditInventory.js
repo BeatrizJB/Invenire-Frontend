@@ -1,13 +1,16 @@
 import React from "react";
-import { newInventory, createItem } from "../api";
+import { updateTitle, editItem, itemSpecs } from "../api";
 import { toast } from "react-toastify";
 
-class CreateInventory extends React.Component {
+
+class UpdateInventory extends React.Component {
   state = {
     title: "",
-    items: [{
-      designation: ""
-    }],
+    items: [
+      {
+        designation: "",
+      },
+    ],
   };
 
   handleChange = (event) => {
@@ -24,7 +27,7 @@ class CreateInventory extends React.Component {
     };
 
     await newInventory(newInv);
-    console.log(newInv)
+    console.log(newInv);
     toast.success("Inventory created");
     this.props.history.push("/");
   };
@@ -42,7 +45,7 @@ class CreateInventory extends React.Component {
             name="title"
             value={title}
           />
-          
+
           <button className="butts" type="submit">
             Create
           </button>
@@ -52,4 +55,4 @@ class CreateInventory extends React.Component {
   }
 }
 
-export default CreateInventory;
+export default UpdateInventory;

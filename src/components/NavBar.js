@@ -16,7 +16,14 @@ function Navbar({ loggedInUser, setLoggedInUser }) {
         </div>
         <div>
           <p>
-            <NavLink activeStyle={{ color: "red" }} exact to="list">
+            <NavLink activeStyle={{ color: "red" }} exact to="/myinventories">
+              My Inventories
+            </NavLink>
+          </p>
+        </div>
+        <div>
+          <p>
+            <NavLink activeStyle={{ color: "red" }} exact to="/newinventory">
               My Inventories
             </NavLink>
           </p>
@@ -24,7 +31,9 @@ function Navbar({ loggedInUser, setLoggedInUser }) {
         <div>
           <p>
             <NavLink to="/">
-              <button className="butts" onClick={logoutUser}>Logout</button>
+              <button className="butts" onClick={logoutUser}>
+                Logout
+              </button>
             </NavLink>
           </p>
         </div>

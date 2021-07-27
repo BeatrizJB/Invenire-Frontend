@@ -68,7 +68,7 @@ class App extends React.Component {
           <div >
             <Route exact path="/" component={Home} />
             <Route exact path="/myinventories" component={Inventories} />
-            <Route exact path="/list/new" component={CreateInventory} />
+            <Route exact path="/newinventory" component={CreateInventory} />
             <Route exact path="/signup" component={Signup} />
             <Route
               exact
