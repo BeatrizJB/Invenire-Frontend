@@ -1,33 +1,47 @@
 import React from "react";
-import { updateTitle, editItem, itemSpecs } from "../api";
-import { toast } from "react-toastify";
+import { inventory } from "../api";
+import { NavLink } from "react-router-dom";
 
 class Inventory extends React.Component {
   state = {
-    allInv: [],
+    singleInv: [],
   };
 
   async componentDidMount() {
-    const response = await myInventory();
+    const response = await inventory();
     this.setState({
-      allInv: response.data,
+      singleInv: response.data,
     });
   }
 
   render() {
     return (
       <>
-        <h2>My Inventories</h2>
-        <div>
-          {this.state.allInv.map((inv) => {
-            return (
-              <h3 key={inv._id}>
-                <p>{inv.title}</p>
-                <NavLink to={``}></NavLink>
-              </h3>
-            );
-          })}
-        </div>
+        <section>
+          <div>
+          <h2>yo</h2>
+            {this.state.singleInv.map((inv) => {
+              return (
+                <>
+                  <h2 key={inv._id}>{inv.title}</h2>
+                  <div>
+                  <ul>
+                    {inv.listItems.map((item) => {
+                      return (
+                        <li>
+                          <NavLink to={`myinventories/${item._id}`}>
+                          {item.designation}
+                          </NavLink>
+                          
+                        </li>
+                      );
+                    })}
+                  </ul></div>
+                </>
+              );
+            })}
+          </div>
+        </section>
       </>
     );
   }

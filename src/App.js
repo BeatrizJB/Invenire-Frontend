@@ -1,6 +1,8 @@
 import "./App.css";
 import Inventories from "./components/MyInventories";
 import CreateInventory from "./components/NewInventory";
+import Inventory from "./components/Inventory";
+import EditInventory from "./components/EditInventory";
 import Home from "./components/Home";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
@@ -44,10 +46,20 @@ class App extends React.Component {
         </div>
 
         <Switch>
-          <div >
+          <div>
             <Route exact path="/" component={Home} />
             <Route exact path="/myinventories" component={Inventories} />
             <Route exact path="/newinventory" component={CreateInventory} />
+            <Route
+              exact
+              path="/myinventories/:invId"
+              component={Inventory}
+            />
+            <Route
+              exact
+              path="/myinventories/edittitle"
+              component={EditInventory}
+            />
             <Route exact path="/signup" component={Signup} />
             <Route
               exact

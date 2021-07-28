@@ -24,9 +24,9 @@ function Home() {
               </em>
             </p>
             <p className="TextBox2">
-              A project based on the concept of inventory, Invenire. The
+              A project based on the concept of inventory creation, Invenire. The
               objective is to make it easier for everyone to organise their
-              life, using this app to log their possessions.
+              life, using this app to keep track of their possessions.
             </p>
           </article>
         </div>

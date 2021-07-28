@@ -7,7 +7,7 @@ const baseURL = `${process.env.REACT_APP_SERVER_HOSTNAME}/api`;
 /* PROJECT ROUTES */
 
 export const myInventories = () => {
-  return axios.get(`${baseURL}/myinventories`);
+  return axios.get(`${baseURL}/myinventories`, { withCredentials: true });
 };
 
 export const inventory = (invId) => {
@@ -17,7 +17,9 @@ export const inventory = (invId) => {
 //get items list
 
 export const newInventory = (newInv) => {
-  return axios.post(`${baseURL}/newinventory`, newInv);
+  return axios.post(`${baseURL}/newinventory`, newInv, {
+    withCredentials: true,
+  });
 };
 
 export const updateTitle = (invId) => {

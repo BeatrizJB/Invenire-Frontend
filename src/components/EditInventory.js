@@ -3,7 +3,7 @@ import { updateTitle, editItem, itemSpecs } from "../api";
 import { toast } from "react-toastify";
 
 
-class UpdateInventory extends React.Component {
+class EditInventory extends React.Component {
   state = {
     title: "",
     items: [
@@ -22,14 +22,26 @@ class UpdateInventory extends React.Component {
   handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    const newInv = {
+    const titleUp = {
       title: this.state.title,
     };
 
-    await newInventory(newInv);
-    console.log(newInv);
-    toast.success("Inventory created");
+    await updateTitle(titleUp);
+    console.log(titleUp);
+    toast.success("Title updated");
     this.props.history.push("/");
+
+    // const itemUp = {
+    //   designation: this.state.designation
+    // };
+    // await editItem(itemUp);
+    //     console.log(itemUp);
+    //     toast.success("Item updated");
+    //     this.props.history.push("/");
+
+
+
+
   };
 
   render() {
@@ -55,4 +67,4 @@ class UpdateInventory extends React.Component {
   }
 }
 
-export default UpdateInventory;
+export default EditInventory;
