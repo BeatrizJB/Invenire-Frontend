@@ -23,7 +23,7 @@ class CreateInventory extends React.Component {
     await newInventory(newInv);
     console.log(newInv);
     toast.success("Inventory created");
-    this.props.history.push("/myinventories");
+    this.props.history.push("/myinventories/");
   };
 
   render() {
@@ -31,7 +31,7 @@ class CreateInventory extends React.Component {
     return (
       <>
         <section className="Form">
-          <div>
+          
             <h2>New Inventory</h2>
             <form onSubmit={this.handleFormSubmit}>
               <div className="Fill">
@@ -49,7 +49,7 @@ class CreateInventory extends React.Component {
                 </button>
               </div>
             </form>
-          </div>
+          
         </section>
       </>
     );

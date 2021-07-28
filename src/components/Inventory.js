@@ -4,42 +4,36 @@ import { NavLink } from "react-router-dom";
 
 class Inventory extends React.Component {
   state = {
-    singleInv: [],
+    title: "",
+    listItems: [{
+      itemId: "",
+      designation: "",
+    }]
   };
 
   async componentDidMount() {
-    const response = await inventory();
+    const response = await inventory(this.props.match.params.id);
     this.setState({
-      singleInv: response.data,
+      title: response.data.title,
+      itemId: response.data._id,
+      designation: response.data.designation,
     });
   }
 
-  render() {
+/* <NavLink to={`myinventories/${item._id}`}>{item.designation}</NavLink> */
+  
+render() {
+  const { title, itemId, designation} = this.state;
     return (
       <>
         <section>
           <div>
           <h2>yo</h2>
-            {this.state.singleInv.map((inv) => {
-              return (
-                <>
-                  <h2 key={inv._id}>{inv.title}</h2>
-                  <div>
-                  <ul>
-                    {inv.listItems.map((item) => {
-                      return (
-                        <li>
-                          <NavLink to={`myinventories/${item._id}`}>
-                          {item.designation}
-                          </NavLink>
-                          
-                        </li>
-                      );
-                    })}
-                  </ul></div>
-                </>
-              );
-            })}
+          <h2>{title}</h2>
+          <ul>
+            <li><NavLink to={`/myinventories`}>{designation}</NavLink></li>
+          </ul>
+
           </div>
         </section>
       </>

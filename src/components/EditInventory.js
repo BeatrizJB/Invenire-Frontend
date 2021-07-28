@@ -31,13 +31,13 @@ class EditInventory extends React.Component {
     toast.success("Title updated");
     this.props.history.push("/");
 
-    // const itemUp = {
-    //   designation: this.state.designation
-    // };
-    // await editItem(itemUp);
-    //     console.log(itemUp);
-    //     toast.success("Item updated");
-    //     this.props.history.push("/");
+    const itemUp = {
+      designation: this.state.designation
+    };
+    await editItem(itemUp);
+        console.log(itemUp);
+        toast.success("Item updated");
+        this.props.history.push("/");
 
 
 

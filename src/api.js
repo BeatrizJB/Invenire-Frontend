@@ -2,7 +2,7 @@ import axios from "axios";
 const baseURL = `${process.env.REACT_APP_SERVER_HOSTNAME}/api`;
 
 //this piece of url is gonna repeat over and over so just use a const
-//to mae it easier, also when u have an official url just change in .env
+//to make it easier, also when u have an official url just change in .env
 
 /* PROJECT ROUTES */
 

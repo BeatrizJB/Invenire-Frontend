@@ -33,7 +33,7 @@ class Login extends React.Component {
     return (
       <>
         <section className="Form">
-          <div>
+          <div className="Form2">
             <form onSubmit={this.handleFormSubmit}>
               <div className="Fill">
                 <label>Username</label>
