@@ -37,6 +37,10 @@
   }
 }
 
+ul {
+  list-style: none;
+}
+
 /* NAVBAR BEGIN --------------------------------------- */
 
 .Directory {
@@ -45,6 +49,12 @@
   float: left;
   margin-top: 10%;
   margin-bottom: 10%;
+}
+
+.LogoutButt {
+  margin: 5%;
+  width: 15%;
+  height: auto;
 }
 
 /* NAVBAR END --------------------------------------- */

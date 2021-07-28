@@ -3,7 +3,7 @@ import Inventories from "./components/MyInventories";
 import CreateInventory from "./components/NewInventory";
 import Inventory from "./components/Inventory";
 import EditInventory from "./components/EditInventory";
-import ItemSpecs from "./components/AddSpecs";
+import AddSpecs from "./components/AddSpecs";
 import Home from "./components/Home";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
@@ -60,7 +60,9 @@ class App extends React.Component {
             <Route
               exact
               path="/myinventories/:invId/additemspecs/:itemId"
-              component={ItemSpecs}
+              render={(props) => {
+                return <AddSpecs {...props} />;
+              }}
             />
             <Route exact path="/signup" component={Signup} />
             <Route

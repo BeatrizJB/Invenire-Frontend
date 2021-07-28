@@ -13,30 +13,27 @@ class Inventory extends React.Component {
     this.setState({
       title: response.data.title,
       listItems: response.data.listItems,
-      
+      imageUrl: response.data.imageUrl,
     });
   }
 
   /* <NavLink to={`myinventories/${item._id}`}>{item.designation}</NavLink> */
 
   render() {
-    const { title, listItems } = this.state;
+    const { listItems } = this.state;
     return (
       <>
         <section>
           <div>
             <h2>yo</h2>
-            <h2>{title}</h2>
+            
             <ul>
               <ul>
                 {listItems.map((item) => {
                   return (
                     <>
-                      <li>
-                        <NavLink to={`myinventories/${item._id}`}>
-                          {item.designation}
-                        </NavLink>
-                      </li>
+                    <h2>{item.designation}</h2>
+                      
                       <li>{item.category}</li>
                       <li>{item.quantity}</li>
                       <li>{item.description}</li>

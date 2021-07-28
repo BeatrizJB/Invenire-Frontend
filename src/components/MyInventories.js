@@ -26,11 +26,7 @@ class Inventories extends React.Component {
                   <h2 key={inv._id}>
                   <NavLink to={`myinventories/${inv._id}`}>{inv.title}</NavLink>                
                   </h2>
-                  <ul>
-                    {inv.listItems.map((item) => {
-                      return <li>{item.designation}</li>;
-                    })}
-                  </ul>
+        
                 </>
               );
             })}

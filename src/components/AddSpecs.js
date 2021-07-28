@@ -35,7 +35,11 @@ class ItemSpecs extends React.Component {
       imageUrl: response.data.fileUrl,
     };
 
-    await itemSpecs(specs);
+    await itemSpecs(
+      this.props.match.params.invId,
+      this.props.match.params.itemId,
+      specs
+    );
     // console.log(newInv);
     toast.success("Specs added");
     this.props.history.push("/myinventories/");
@@ -112,6 +116,5 @@ class ItemSpecs extends React.Component {
 }
 
 export default ItemSpecs;
-
 
 // http://localhost:3000/myinventories/61012cb20d07100015a7a7ba/additemspecs/61012cbf0d07100015a7a7bc

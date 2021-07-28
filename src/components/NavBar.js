@@ -31,9 +31,11 @@ function Navbar({ loggedInUser, setLoggedInUser }) {
         <div>
           <p>
             <NavLink to="/">
-              <button className="butts" onClick={logoutUser}>
-                Logout
-              </button>
+              <img
+                src="https://res.cloudinary.com/b-jb/image/upload/v1627485674/invenire-testing/turn-off_oqnnit.png"
+                alt="off icon"
+                className="LogoutButt" onClick={logoutUser}
+              />
             </NavLink>
           </p>
         </div>

@@ -34,8 +34,12 @@ export const editItem = (invId, itemId) => {
   return axios.put(`${baseURL}/myinventories/${invId}/edititem/${itemId}`);
 };
 
-export const itemSpecs = (invId, itemId) => {
-  return axios.put(`${baseURL}/myinventories/${invId}/additemspecs/${itemId}`);
+export const itemSpecs = (invId, itemId, spec) => {
+  return axios.put(
+    `${baseURL}/myinventories/${invId}/additemspecs/${itemId}`,
+    spec,
+    { withCredentials: true }
+  );
 };
 
 export const deleteInventory = (invId) => {
