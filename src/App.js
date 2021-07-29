@@ -4,12 +4,12 @@ import Home from "./components/Home";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Navbar from "./components/NavBar";
-import Inventories from "./components/MyInventories";
+import Inventories from "./components/Inventories";
 
 //code WIP
 import Inventory from "./components/Inventory";
 
-import CreateInventory from "./components/NewInventory";
+import CreateInventory from "./components/CreateInventory";
 import AddEditSpecs from "./components/AddEditSpecs";
 
 import EditInventory from "./components/EditInventory";

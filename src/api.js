@@ -13,7 +13,9 @@ export const myInventories = () => {
 };
 
 export const inventory = (invId) => {
-  return axios.get(`${baseURL}/myinventories/${invId}`, {withCredentials: true});
+  return axios.get(`${baseURL}/myinventories/${invId}`, {
+    withCredentials: true,
+  });
 };
 
 //get allinv + single inv END
@@ -46,7 +48,6 @@ export const updateTitle = (invId) => {
   return axios.put(`${baseURL}/myinventories/editinv/${invId}`);
 };
 
-
 //update inv title + item specs END
 
 //delete inv + item specs BEGIN
@@ -56,7 +57,7 @@ export const deleteInventory = (invId) => {
 };
 
 export const deleteItem = (invId, itemId) => {
-  return axios.delete(`${baseURL}/myinventories/${invId}/removeitem/${itemId}`);
+  return axios.put(`${baseURL}/myinventories/${invId}/removeitem/${itemId}`);
 };
 
 //delete inv + item specs END

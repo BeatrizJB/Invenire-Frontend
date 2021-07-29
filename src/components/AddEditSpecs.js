@@ -2,7 +2,7 @@ import React from "react";
 import { itemSpecs, deleteItem, uploadFile, inventory } from "../api";
 import { toast } from "react-toastify";
 
-class ItemSpecs extends React.Component {
+class AddEditSpecs extends React.Component {
   state = {
     listItems: [],
     designation: "",
@@ -25,7 +25,7 @@ class ItemSpecs extends React.Component {
   handleDeleteItem = async () => {
     await deleteItem(this.props.match.params.invId, this.props.match.params.itemId);
     toast.success("Inventory deleted.");
-    this.props.history.push(`/myinventories/${this.props.match.params.itemId}`);
+    this.props.history.push(`/myinventories/${this.props.match.params.invId}`);
   };
 
   handleChange = (event) => {
@@ -147,6 +147,6 @@ class ItemSpecs extends React.Component {
   }
 }
 
-export default ItemSpecs;
+export default AddEditSpecs;
 
 // http://localhost:3000/myinventories/61012cb20d07100015a7a7ba/itemspecs/61012cbf0d07100015a7a7bc
