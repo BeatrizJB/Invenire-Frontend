@@ -41,6 +41,14 @@ ul {
   list-style: none;
 }
 
+img {
+  width: 25%;
+}
+
+li {
+  padding: 1%;
+}
+
 /* NAVBAR BEGIN --------------------------------------- */
 
 .Directory {
@@ -112,22 +120,47 @@ button {
   border-radius: 50%;
 }
 
-.butts {
-  background: transparent;
-  border: 1px solid #F3E5F5 !important;
+.Butts {
+  background: grey;
+  border: 1px solid grey !important;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: black;
+  color: white;
   cursor: pointer;
   transition: transform .2s ease-out;
   margin-right: 10%;
 }
 
-.butts:hover {
-  background-color: black;
+.Delbutts {
+  background: grey;
+  border: 1px solid grey !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
+  cursor: pointer;
+  transition: transform .2s ease-out;
+  margin-right: 10%;
+  width: 80% !important;
+  padding-left: 80% !important;
+  padding-right: 80% !important;
+  margin-top: 15%;
+  margin-bottom: 15%;
+  margin-right: 75%;
 }
+
+.Delbutts:hover {
+  background-color: transparent;
+  color: black;
+}
+
+.Butts:hover {
+  background-color: transparent;
+  color: black;
+}
+
+
 /* BUTTONS END --------------------------------------- */
 
 /* AUTH BEGIN -----------------------------------------*/
@@ -213,4 +246,82 @@ button {
   margin-bottom: 5%;
 }
 
+.Addform{
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid red;
+  margin-top: 2%;
+  margin-left: 15%; 
+}
+
+.Addform button {
+  margin-left: 31%;
+  margin-top: 20%;
+  margin-bottom: 5%;
+}
+
+.Add {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid orange;  
+  margin-top: 2%;  
+  padding-top: 10%;
+  margin-bottom: 10%;
+}
+
+.Linkto {
+  width: 80%;
+  height: 10%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid palevioletred;
+  margin-left: 15%;
+}
+
+.Inventorydisplay ul {
+  width: 100%;
+}
+
+.Inventorydisplay h2 {
+  padding-left: 5%;
+}
+
+.Edittitle1 {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  border: 1px solid plum;
+  margin-top: 5%;
+  margin-left: 15%;
+}
+
+.Edittitle2 {
+  height: 40%;
+  border: 1px solid chocolate;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+}
 /* INV END ---------------------------------------*/

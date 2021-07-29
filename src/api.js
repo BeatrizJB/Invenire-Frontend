@@ -6,15 +6,19 @@ const baseURL = `${process.env.REACT_APP_SERVER_HOSTNAME}/api`;
 
 /* PROJECT ROUTES */
 
+//get allinv + single inv BEGIN
+
 export const myInventories = () => {
   return axios.get(`${baseURL}/myinventories`, { withCredentials: true });
 };
 
 export const inventory = (invId) => {
-  return axios.get(`${baseURL}/myinventories/${invId}`);
+  return axios.get(`${baseURL}/myinventories/${invId}`, {withCredentials: true});
 };
 
-//get items list
+//get allinv + single inv END
+
+//create inv + item + item specs BEGIN
 
 export const newInventory = (newInv) => {
   return axios.post(`${baseURL}/newinventory`, newInv, {
@@ -22,35 +26,40 @@ export const newInventory = (newInv) => {
   });
 };
 
-export const updateTitle = (invId) => {
-  return axios.put(`${baseURL}/myinventories/${invId}`);
-};
-
-export const createItem = (invId) => {
-  return axios.put(`${baseURL}/myinventories/additems/${invId}`);
-};
-
-export const editItem = (invId, itemId) => {
-  return axios.put(`${baseURL}/myinventories/${invId}/edititem/${itemId}`);
+export const createItem = (invId, item) => {
+  return axios.put(`${baseURL}/myinventories/additems/${invId}`, item);
 };
 
 export const itemSpecs = (invId, itemId, spec) => {
   return axios.put(
-    `${baseURL}/myinventories/${invId}/additemspecs/${itemId}`,
+    `${baseURL}/myinventories/${invId}/itemspecs/${itemId}`,
     spec,
     { withCredentials: true }
   );
 };
 
+//create inv + item + item specs END
+
+//update inv title BEGIN
+
+export const updateTitle = (invId) => {
+  return axios.put(`${baseURL}/myinventories/editinv/${invId}`);
+};
+
+
+//update inv title + item specs END
+
+//delete inv + item specs BEGIN
+
 export const deleteInventory = (invId) => {
   return axios.delete(`${baseURL}/myinventories/deleteinventory/${invId}`);
 };
 
-export const deleteItem = (invId) => {
-  return axios.delete(`${baseURL}/myinventories/removeitem/${invId}`);
+export const deleteItem = (invId, itemId) => {
+  return axios.delete(`${baseURL}/myinventories/${invId}/removeitem/${itemId}`);
 };
 
-//delete items specs only
+//delete inv + item specs END
 
 export const uploadFile = (uploadData) => {
   return axios.post(`${baseURL}/upload`, uploadData);

@@ -14,6 +14,7 @@ function Navbar({ loggedInUser, setLoggedInUser }) {
           <p>Welcome</p>
           <p>{loggedInUser.username}</p>
         </div>
+
         <div>
           <p>
             <NavLink activeStyle={{ color: "red" }} exact to="/myinventories">
@@ -28,6 +29,13 @@ function Navbar({ loggedInUser, setLoggedInUser }) {
             </NavLink>
           </p>
         </div>
+        <div>
+        <p>
+          <NavLink activeStyle={{ color: "green" }} exact to="/">
+            Home
+          </NavLink>
+        </p>
+      </div>
         <div>
           <p>
             <NavLink to="/">

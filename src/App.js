@@ -1,13 +1,20 @@
 import "./App.css";
-import Inventories from "./components/MyInventories";
-import CreateInventory from "./components/NewInventory";
-import Inventory from "./components/Inventory";
-import EditInventory from "./components/EditInventory";
-import AddSpecs from "./components/AddSpecs";
+//code working perf
 import Home from "./components/Home";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Navbar from "./components/NavBar";
+import Inventories from "./components/MyInventories";
+
+//code WIP
+import Inventory from "./components/Inventory";
+
+import CreateInventory from "./components/NewInventory";
+import AddEditSpecs from "./components/AddEditSpecs";
+
+import EditInventory from "./components/EditInventory";
+
+//others
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 import { Route, Switch } from "react-router-dom";
@@ -49,21 +56,25 @@ class App extends React.Component {
           <div>
             <Route exact path="/" component={Home} />
             <Route exact path="/myinventories" component={Inventories} />
-            <Route exact path="/newinventory" component={CreateInventory} />
-
+            
             <Route exact path="/myinventories/:invId" component={Inventory} />
+
+            <Route exact path="/newinventory" component={CreateInventory} />
             <Route
               exact
-              path="/myinventories/edittitle"
-              component={EditInventory}
-            />
-            <Route
-              exact
-              path="/myinventories/:invId/additemspecs/:itemId"
+              path="/myinventories/:invId/itemspecs/:itemId"
               render={(props) => {
-                return <AddSpecs {...props} />;
+                return <AddEditSpecs {...props} />;
               }}
             />
+
+            <Route
+              exact
+              path="/myinventories/editinv/:invId"
+              component={EditInventory}
+            />
+            
+
             <Route exact path="/signup" component={Signup} />
             <Route
               exact

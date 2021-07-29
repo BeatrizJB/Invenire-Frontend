@@ -1,15 +1,31 @@
 import React from "react";
-import { itemSpecs, uploadFile } from "../api";
+import { itemSpecs, deleteItem, uploadFile, inventory } from "../api";
 import { toast } from "react-toastify";
 
 class ItemSpecs extends React.Component {
   state = {
+    listItems: [],
     designation: "",
     category: "",
     quantity: "",
     description: "",
     location: "",
     imageUrl: "",
+  };
+
+  async componentDidMount() {
+    const response = await inventory(this.props.match.params.invId);
+    console.log(response.data.listItems);
+     const item = response.data.listItems.filter((item) => item._id === this.props.match.params.itemId);
+     console.log(item);
+     this.setState({
+      designation: item[0].designation,
+    });
+  }
+  handleDeleteItem = async () => {
+    await deleteItem(this.props.match.params.invId, this.props.match.params.itemId);
+    toast.success("Inventory deleted.");
+    this.props.history.push(`/myinventories/${this.props.match.params.itemId}`);
   };
 
   handleChange = (event) => {
@@ -41,8 +57,8 @@ class ItemSpecs extends React.Component {
       specs
     );
     // console.log(newInv);
-    toast.success("Specs added");
-    this.props.history.push("/myinventories/");
+    toast.success("Specs added/edited");
+    this.props.history.push("/myinventories/:invId");
   };
 
   handleChangeFile = (event) => {
@@ -57,8 +73,19 @@ class ItemSpecs extends React.Component {
     return (
       <>
         <section className="Bigform">
-          <h2>Add/Edit Specifications to {designation}</h2>
+          <h3>
+            Add/Edit Specifications to <em>{designation}</em>
+          </h3>
           <form onSubmit={this.handleFormSubmit} encType="multipart/form-data">
+            <div className="Longfill">
+              <label>Item</label>
+              <input
+                type="text"
+                onChange={this.handleChange}
+                name="designation"
+                value={designation}
+              />
+            </div>
             <div className="Longfill">
               <label>Category</label>
               <input
@@ -103,12 +130,17 @@ class ItemSpecs extends React.Component {
                 onChange={this.handleChangeFile}
               />
             </div>
-            <div className="Buttsdiv">
-              <button className="butts" type="submit">
+            <div>
+              <button className="Butts" type="submit">
                 Add/Edit
               </button>
             </div>
           </form>
+          <div className="Twinbutts">
+            <button className="Delbutts" onClick={this.handleDeleteItem}>
+              Delete
+            </button>
+          </div>
         </section>
       </>
     );
@@ -117,4 +149,4 @@ class ItemSpecs extends React.Component {
 
 export default ItemSpecs;
 
-// http://localhost:3000/myinventories/61012cb20d07100015a7a7ba/additemspecs/61012cbf0d07100015a7a7bc
+// http://localhost:3000/myinventories/61012cb20d07100015a7a7ba/itemspecs/61012cbf0d07100015a7a7bc

@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 class CreateInventory extends React.Component {
   state = {
     title: "",
+    listItems: [],
   };
 
   handleChange = (event) => {
@@ -18,12 +19,13 @@ class CreateInventory extends React.Component {
 
     const newInv = {
       title: this.state.title,
+      listItems: this.state.listItems,
     };
 
     await newInventory(newInv);
     console.log(newInv);
     toast.success("Inventory created");
-    this.props.history.push("/myinventories/");
+    this.props.history.push("/myinventories");
   };
 
   render() {
@@ -33,6 +35,7 @@ class CreateInventory extends React.Component {
         <section className="Form">
           
             <h2>New Inventory</h2>
+
             <form onSubmit={this.handleFormSubmit}>
               <div className="Fill">
                 <label>Title</label>
@@ -43,11 +46,13 @@ class CreateInventory extends React.Component {
                   value={title}
                 />
               </div>
+
               <div>
-                <button className="butts" type="submit">
+                <button className="Butts" type="submit">
                   Create
                 </button>
               </div>
+
             </form>
           
         </section>
