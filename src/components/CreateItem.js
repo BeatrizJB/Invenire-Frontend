@@ -52,7 +52,7 @@ class CreateItem extends React.Component {
     return (
       <>
         <section className="Bigform">
-          <h2>Add Items to ___ {title}</h2>
+          <h2>Add Items to {title}</h2>
           <form onSubmit={this.handleFormSubmit}>
             <div className="Longfill">
               <label>Item</label>

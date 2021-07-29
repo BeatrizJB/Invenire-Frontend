@@ -17,22 +17,24 @@ class Inventories extends React.Component {
   render() {
     return (
       <>
-        <section>
-          <h2>My Inventories</h2>
-          <div>
+        <section className="Inventories">
+          <h2>Inventories</h2>
+          <div className="Invs-all">
             {this.state.allInv.map((inv) => {
               return (
                 <>
-                  <h2 key={inv._id}>
-                    <NavLink to={`myinventories/${inv._id}`}>
-                      {inv.title}
-                    </NavLink>
-                  </h2>
-                  <ul>
-                    {inv.listItems.map((item) => {
-                      return <li>{item.designation}</li>;
-                    })}
-                  </ul>
+                  <div className="Inv-card">
+                    <h2 key={inv._id}>
+                      <NavLink to={`myinventories/${inv._id}`}>
+                        {inv.title}
+                      </NavLink>
+                    </h2>
+                    <div className="Inv-body">
+                      {inv.listItems.map((item) => {
+                        return <p>{item.designation}</p>;
+                      })}
+                    </div>
+                  </div>
                 </>
               );
             })}

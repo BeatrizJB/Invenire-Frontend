@@ -32,8 +32,8 @@ class CreateInventory extends React.Component {
     const { title } = this.state;
     return (
       <>
-        <section className="Form">
-          
+        <section className="Inventories">
+          <div className="Addform">
             <h2>New Inventory</h2>
 
             <form onSubmit={this.handleFormSubmit}>
@@ -52,9 +52,8 @@ class CreateInventory extends React.Component {
                   Create
                 </button>
               </div>
-
             </form>
-          
+          </div>
         </section>
       </>
     );

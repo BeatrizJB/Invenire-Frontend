@@ -45,7 +45,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <ToastContainer />
-        <div className="Directory">
+        <div>
           <Navbar
             loggedInUser={this.state.loggedInUser}
             setLoggedInUser={this.setLoggedInUser}

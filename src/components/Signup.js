@@ -31,40 +31,41 @@ class Signup extends React.Component {
     return (
       <>
         <section className="Form">
-          <div>
-            <form onSubmit={this.handleFormSubmit}>
-              <div className="Fill">
-                <label>Username</label>
-                <input
-                  type="text"
-                  name="username"
-                  onChange={this.handleChange}
-                  value={username}
-                />
-              </div>
+          <div className="Form2">
+            <div>
+              <form onSubmit={this.handleFormSubmit}>
+                <div className="Fill">
+                  <label>Username</label>
+                  <input
+                    type="text"
+                    name="username"
+                    onChange={this.handleChange}
+                    value={username}
+                  />
+                </div>
 
-              <div className="Fill">
-                <label>Password</label>
-                <input
-                  type="password"
-                  name="password"
-                  onChange={this.handleChange}
-                  value={password}
-                />
-              </div>
-              <div>
-                <button className="butts" type="submit">
-                  Sign Up
-                </button>
-              </div>
-            </form>
+                <div className="Fill">
+                  <label>Password</label>
+                  <input
+                    type="password"
+                    name="password"
+                    onChange={this.handleChange}
+                    value={password}
+                  />
+                </div>
+                <div className="Form3">
+                  <button className="butts" type="submit">
+                    Sign Up
+                  </button>
+                </div>
+              </form>
             </div>
             <div className="Donthave">
               <p>
                 <NavLink to="/login">Already have an account?</NavLink>
               </p>
             </div>
-          
+          </div>
         </section>
       </>
     );

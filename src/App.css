@@ -52,25 +52,56 @@ li {
 /* NAVBAR BEGIN --------------------------------------- */
 
 .Directory {
-  width: 10%;
-  height: 70%;
-  float: left;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  width: 100%;
+  height: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.Navigation {
+  width:80%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.Navigation p {
+  padding: 2%;
+}
+
+.Logged {
+  width: 20%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around !important;
+  align-items: center;
+}
+
+.Logged p {  
+  color: darkslategray ;
 }
 
 .LogoutButt {
-  margin: 5%;
-  width: 15%;
+  width: 8%;
+  padding: 2%;
   height: auto;
 }
+
+
 
 /* NAVBAR END --------------------------------------- */
 
 /* HOME PAGE BEGIN --------------------------------------- */
 
 .Home {
-  width: 80%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -78,6 +109,15 @@ li {
   justify-items: center;
   align-items: center;
   text-align: center;
+
+}
+
+.Bodycard {
+  width: 60%;
+    box-shadow: 0 0 50px #ccc;
+    background-color: transparent;
+    border-radius: 1%;
+    
 }
 
 .Home h1 {
@@ -106,13 +146,14 @@ li {
  text-align: justify;
  font-size: 80%;
  margin-bottom: 5%;
+ margin-top: 3%;
 }
 
 /* HOME PAGE END --------------------------------------- */
 
 /* BUTTONS BEGIN --------------------------------------- */
 
-button {
+/* button {
   margin-top: 10%;
   padding: 5%;
   width: 40%;
@@ -158,45 +199,43 @@ button {
 .Butts:hover {
   background-color: transparent;
   color: black;
-}
+} */
 
 
 /* BUTTONS END --------------------------------------- */
 
 /* AUTH BEGIN -----------------------------------------*/
 .Form {
-  width: 80%;
+  width: 100%;
   height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   justify-items: center;
   align-items: center;
-  margin-top: 9%;
-  border: 1px solid red;
-  padding-left: 5%;
+  margin-top: 5%;
 }
 
-.From2 {
+.Form2 {
   margin: 0% ;
   display: flex;
   flex-direction: column;
   justify-items: center ;
 }
 
+
+
 .Fill {
   width: 100%;
   padding: 15% 0 15% 0 ;
-  margin-bottom: 10%;
-  border: 1px solid orange;
+  margin-top: 15%;
   display: flex;
   flex-direction: column;
 }
 
-.Form button {
-  margin-left: 31%;
-  margin-top: 20%;
-} 
+.Form3 {
+  margin: 40% 0 20% 0;
+}
 
 
 .Donthave {
@@ -204,9 +243,9 @@ button {
   justify-content: center;
   justify-items: center;
   align-items: center;
-  margin-top: 5%;
-  border: 1px solid green;
+  margin-top: 25%;
   width: 100%;
+  font-size: smaller;
 }
 /* AUTH END -----------------------------------------*/
 
@@ -220,8 +259,6 @@ button {
   justify-content: center;
   justify-items: center;
   align-items: center;
-  border: 1px solid red;
-  padding-left: 5%;
   margin-top: 2%;
 }
 
@@ -230,7 +267,6 @@ button {
     height: 20%;
     padding-top: 10%;
     margin-bottom: 10%;
-    border: 1px solid orange;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -241,7 +277,6 @@ button {
 }
 
 .Bigform button {
-  margin-left: 31%;
   margin-top: 20%;
   margin-bottom: 5%;
 }
@@ -254,16 +289,9 @@ button {
   justify-content: center;
   justify-items: center;
   align-items: center;
-  border: 1px solid red;
   margin-top: 2%;
-  margin-left: 15%; 
 }
 
-.Addform button {
-  margin-left: 31%;
-  margin-top: 20%;
-  margin-bottom: 5%;
-}
 
 .Add {
   width: 100%;
@@ -272,8 +300,7 @@ button {
   flex-direction: column;
   justify-content: center;
   justify-items: center;
-  align-items: center;
-  border: 1px solid orange;  
+  align-items: center;  
   margin-top: 2%;  
   padding-top: 10%;
   margin-bottom: 10%;
@@ -282,15 +309,13 @@ button {
 .Linkto {
   width: 80%;
   height: 10%;
-  margin-top: 5%;
+  margin-top: 2%;
   margin-bottom: 5%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   justify-items: center;
   align-items: center;
-  border: 1px solid palevioletred;
-  margin-left: 15%;
 }
 
 .Inventorydisplay ul {
@@ -309,19 +334,76 @@ button {
   justify-content: center;
   justify-items: center;
   align-items: center;
-  border: 1px solid plum;
   margin-top: 5%;
   margin-left: 15%;
 }
 
 .Edittitle2 {
   height: 40%;
-  border: 1px solid chocolate;
   padding: 10%;
   display: flex;
   flex-direction: column;
   justify-items: center;
   align-items: center;
   justify-content: center;
+}
+
+/* INVENTORIES+ INVENTORY COMPONENT*/
+.Inventories {
+  width: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: flex-start;
+    
+}
+
+.Inventory {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: flex-start;
+  box-shadow: 0 0 50px #ccc;
+  background-color: transparent;
+  border-radius: 1%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.Invs-all {
+ width: 100%;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+ align-items: baseline;
+ align-content: flex-start;
+}
+
+.Sing-inv {
+  width: 100%;
+      display: flex;      
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: baseline;
+      align-content: flex-start;
+      color: dimgrey;
+}
+
+.Inv-card {
+  margin: 1%;
+  width: 10%;
+  box-shadow: 0 0 50px #ccc;
+  background-color: transparent;
+  border-radius: 1%;
+}
+
+.Inv-body {
+  display: flex;
+  flex-direction: column ;
+  justify-content: center;
+  align-items: center;
 }
 /* INV END ---------------------------------------*/

@@ -9,48 +9,52 @@ function Navbar({ loggedInUser, setLoggedInUser }) {
   };
   return loggedInUser ? (
     <>
-      <div>
-        <div>
-          <p>Welcome</p>
-          <p>{loggedInUser.username}</p>
-        </div>
-
+      <div className="Directory">
+      <section className="Navigation">
         <div>
           <p>
-            <NavLink activeStyle={{ color: "red" }} exact to="/myinventories">
-              My Inventories
+            <NavLink activeStyle={{ color: "green" }} exact to="/">
+              Home
             </NavLink>
           </p>
         </div>
         <div>
           <p>
-            <NavLink activeStyle={{ color: "red" }} exact to="/newinventory">
+            <NavLink activeStyle={{ color: "green" }} exact to="/myinventories">
+              Inventories
+            </NavLink>
+          </p>
+        </div>
+        <div>
+          <p>
+            <NavLink activeStyle={{ color: "green" }} exact to="/newinventory">
               New Inventory
             </NavLink>
           </p>
         </div>
+        </section>
+        <section className="Logged">
+        <div >
+          <p>Welcome <em>{loggedInUser.username}</em></p>
+          
+        </div>
         <div>
-        <p>
-          <NavLink activeStyle={{ color: "green" }} exact to="/">
-            Home
-          </NavLink>
-        </p>
-      </div>
-        <div>
-          <p>
+          <article>
             <NavLink to="/">
               <img
                 src="https://res.cloudinary.com/b-jb/image/upload/v1627485674/invenire-testing/turn-off_oqnnit.png"
                 alt="off icon"
-                className="LogoutButt" onClick={logoutUser}
+                className="LogoutButt"
+                onClick={logoutUser}
               />
             </NavLink>
-          </p>
+          </article>
         </div>
+        </section>
       </div>
     </>
   ) : (
-    <div>
+    <div className="Directory">
       <div>
         <p>
           <NavLink activeStyle={{ color: "green" }} exact to="/">

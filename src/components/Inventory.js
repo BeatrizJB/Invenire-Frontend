@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 class Inventory extends React.Component {
   state = {
     title: "",
-    designation: '',
+    designation: "",
     listItems: [],
   };
 
@@ -25,7 +25,7 @@ class Inventory extends React.Component {
   };
 
   handleFormSubmit = async (event) => {
-    event.preventDefault();
+    // event.preventDefault();
 
     const item = {
       designation: this.state.designation,
@@ -33,7 +33,6 @@ class Inventory extends React.Component {
     console.log(item);
     await createItem(this.props.match.params.invId, item);
 
-    toast.success("Item added");
     this.props.history.push(`/myinventories/${this.props.match.params.invId}`);
   };
 
@@ -41,14 +40,21 @@ class Inventory extends React.Component {
     const { title, designation, listItems } = this.state;
     return (
       <>
-        <section>
+        <section className="Inventories">
+          <div className="Linkto">
+            <NavLink
+              to={`/myinventories/editinv/${this.props.match.params.invId}`}
+            >
+              Edit Inventory
+            </NavLink>
+          </div>
           <div className="Addform">
-            <h3>
+            <h4>
               Add Items to <em>{title}</em>
-            </h3>
+            </h4>
             <form onSubmit={this.handleFormSubmit}>
               <div className="Add">
-                <label>Designation</label>
+                <label>Item</label>
                 <input
                   type="text"
                   onChange={this.handleChange}
@@ -64,40 +70,30 @@ class Inventory extends React.Component {
               </div>
             </form>
           </div>
-
-          <div className="Inventorydisplay">
+          <div className="Inventory">
             <h2>{title}</h2>
-            <ul>
+            <div className="Sing-inv">
               {listItems.map((item) => {
                 return (
                   <>
-                    <li>
-                      Item:{" "}
-                      <NavLink
-                        to={`/myinventories/${this.props.match.params.invId}/itemspecs/${item._id}`}
-                      >
-                        {item.designation}
-                      </NavLink>
-                    </li>
-                    <li>Category: {item.category}</li>
-                    <li>Quantity: {item.quantity}</li>
-                    <li>Description: {item.description}</li>
-                    <li>Location: {item.location}</li>
-                    <li>
-                      Photo/Image:
+                    <div className="Invs-body">
+                      <h4>
+                        <NavLink
+                          to={`/myinventories/${this.props.match.params.invId}/itemspecs/${item._id}`}
+                        >
+                          {item.designation}
+                        </NavLink>
+                      </h4>
+                      <p>Category {item.category}</p>
+                      <p>Quantity {item.quantity}</p>
+                      <p>Description {item.description}</p>
+                      <p>Location {item.location}</p>
                       <img className="Invpic" src={item.imageUrl} />
-                    </li>
+                    </div>
                   </>
                 );
               })}
-            </ul>
-          </div>
-          <div className="Linkto">
-            <NavLink
-              to={`/myinventories/editinv/${this.props.match.params.invId}`}
-            >
-              Edit Inventory
-            </NavLink>
+            </div>
           </div>
         </section>
       </>

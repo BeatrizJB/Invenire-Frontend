@@ -7,7 +7,7 @@ function Home() {
         <div>
           <h1>Invenire</h1>
         </div>
-        <div>
+        <div className="Bodycard">
           <article>
             <p className="Link2Def">
               <a href="https://www.etymonline.com/word/inventory">
