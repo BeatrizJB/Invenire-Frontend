@@ -53,6 +53,8 @@ label {
   padding: 1%;
 }
 
+
+
 /* NAVBAR BEGIN --------------------------------------- */
 
 .Directory {
@@ -147,23 +149,25 @@ label {
 }
 
 .Howto {
+  width: 60%;
  text-align: justify;
- font-size: 80%;
+ font-size: 75%;
  margin-bottom: 5%;
  margin-top: 3%;
+ color: rgb(122, 120, 120);
 }
 
 /* HOME PAGE END --------------------------------------- */
 
 /* BUTTONS BEGIN --------------------------------------- */
 
-/* button {
+button {
   margin-top: 10%;
   padding: 5%;
-  width: 40%;
+  width: 50%;
   height: 15%;
   border-radius: 50%;
-}*/
+}
 
 .Butts {
   background: grey;
@@ -176,10 +180,10 @@ label {
   transition: transform .2s ease-out;
 }
 
-/* .Butts:hover {
+.Butts:hover {
   background-color: transparent;
   color: black;
-} */ 
+} 
 
 
 /* BUTTONS END --------------------------------------- */

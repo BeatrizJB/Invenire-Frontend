@@ -59,6 +59,13 @@ class Signup extends React.Component {
                   </button>
                 </div>
               </form>
+              <div className="Howto">
+                <p>Username should be unique</p>
+                <p>
+                  Password needs to have, at least, 6 characters with 1 number, 1 lower and 1 upper
+                  case letter
+                </p>
+              </div>
             </div>
             <div className="Donthave">
               <p>
