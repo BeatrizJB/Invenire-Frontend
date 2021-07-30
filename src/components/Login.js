@@ -32,8 +32,8 @@ class Login extends React.Component {
     const { username, password } = this.state;
     return (
       <>
-        <section>
-          <div className="AddLongForm">
+        <section className="Auth">
+          <div className="AuthForm">
             <div className="Add">
               <form onSubmit={this.handleFormSubmit}>
                 <div className="Add">

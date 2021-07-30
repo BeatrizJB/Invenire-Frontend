@@ -30,9 +30,9 @@ class Signup extends React.Component {
     const { username, password } = this.state;
     return (
       <>
-        <section className="AddLongForm">
-          <div className="Add">
-            <div>
+        <section className="Auth">
+          <div className="AuthForm">
+            <div className="Add">
               <form onSubmit={this.handleFormSubmit}>
                 <div className="Add">
                   <label>Username</label>

@@ -42,7 +42,7 @@ ul {
 }
 
 img {
-  width: 100%;
+  width: 50%;
 }
 
 li {
@@ -179,7 +179,7 @@ label {
 /* .Butts:hover {
   background-color: transparent;
   color: black;
-} */ */
+} */ 
 
 
 /* BUTTONS END --------------------------------------- */
@@ -195,19 +195,6 @@ label {
   align-items: center;
   margin-top: 5%;
 }
-
-.Form2 {
-  margin: 0% ;
-  display: flex;
-  flex-direction: column;
-  justify-items: center ;
-}
-
-
-.Form3 {
-  margin: 40% 0 20% 0;
-}
-
 
 .Donthave {
   display: flex;
@@ -247,8 +234,7 @@ label {
   background-color: transparent;
   border-radius: 1%;
   padding: 3%;
-  margin: 3%;
-  
+  margin: 3%;  
 }
 
 .Formbutt {
@@ -293,6 +279,27 @@ label {
   box-shadow: 0 0 50px #ccc;
   background-color: transparent;
   border-radius: 1%;
+}
+
+.Auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.AuthForm {
+  box-shadow: 0 0 50px #ccc;
+  background-color: transparent;
+  border-radius: 1%;
+  padding: 3%;
+  margin: 3%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 
