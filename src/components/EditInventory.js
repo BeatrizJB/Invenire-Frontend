@@ -32,7 +32,6 @@ class EditInventory extends React.Component {
     event.preventDefault();
 
     await updateTitle(this.state);
-    toast.success(`new title: ${this.state.title}`);
     this.props.history.push(`/myinventories/${this.props.match.params.invId}`); 
   };
 

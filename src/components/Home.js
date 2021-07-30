@@ -24,27 +24,15 @@ function Home() {
               </em>
             </p>
             <p className="TextBox2">
-              A project based on the concept of inventory creation, Invenire. The
+              An app based on the concept of inventory creation, Invenire. The
               objective is to make it easier for everyone to organise their
               life, using this app to keep track of their possessions.
             </p>
           </article>
         </div>
-        <div className="Howto">
-          <div>
-            <p>How does it work?</p>
-          </div>
-          <div className="Steps">
-            <p>
-              Step 1. Sign Up to get access to the fucntionalities of this app.
-            </p>
-            <p>Step 2. Log In and go to "New Inventory".</p>
-            <p>Step 3. Create a Title and Designate your items.</p>
-            <p>
-              Step 4. If required, click the item to give it more information.
-            </p>
-          </div>
-        </div>
+        <footer>Created by <a href="https://github.com/BeatrizJB">
+                BJB
+              </a></footer>
       </section>
     </>
   );
