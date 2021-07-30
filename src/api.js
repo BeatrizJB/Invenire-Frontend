@@ -44,8 +44,8 @@ export const itemSpecs = (invId, itemId, spec) => {
 
 //update inv title BEGIN
 
-export const updateTitle = (invId) => {
-  return axios.put(`${baseURL}/myinventories/editinv/${invId}`);
+export const updateTitle = (title) => {
+  return axios.put(`${baseURL}/myinventories/editinv/${title.id}`, title);
 };
 
 //update inv title + item specs END

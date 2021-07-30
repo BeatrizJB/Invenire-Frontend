@@ -62,7 +62,7 @@ class Inventory extends React.Component {
                 />
               </div>
 
-              <div>
+              <div className="Formbutt">
                 <button className="Butts" type="submit">
                   Add Item
                 </button>

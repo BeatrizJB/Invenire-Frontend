@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 
 class EditInventory extends React.Component {
   state = {
+    id: '',
     title: "",
   };
 
@@ -16,6 +17,7 @@ class EditInventory extends React.Component {
   async componentDidMount() {
     const response = await inventory(this.props.match.params.invId);
     this.setState({
+      id: response.data._id,
       title: response.data.title,
     })
   }
@@ -30,7 +32,7 @@ class EditInventory extends React.Component {
     event.preventDefault();
 
     await updateTitle(this.state);
-    toast.success("Inventory title updated");
+    toast.success(`new title: ${this.state.title}`);
     this.props.history.push(`/myinventories/${this.props.match.params.invId}`); 
   };
 
@@ -53,13 +55,13 @@ class EditInventory extends React.Component {
                 />
               </div>
 
-              <div className="Twinbutts">
+              <div className="Longformbutt2">
                 <button className="Butts" type="submit">
                   Edit
                 </button>
 
                 <button
-                  className="Delbutts"
+                  className="Butts"
                   onClick={this.handleDeleteInventory}
                 >
                   Delete

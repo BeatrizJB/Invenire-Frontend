@@ -15,14 +15,19 @@ class AddEditSpecs extends React.Component {
 
   async componentDidMount() {
     const response = await inventory(this.props.match.params.invId);
-     const item = response.data.listItems.filter((item) => item._id === this.props.match.params.itemId);
-     
-     this.setState({
+    const item = response.data.listItems.filter(
+      (item) => item._id === this.props.match.params.itemId
+    );
+
+    this.setState({
       designation: item[0].designation,
     });
   }
   handleDeleteItem = async () => {
-    await deleteItem(this.props.match.params.invId, this.props.match.params.itemId);
+    await deleteItem(
+      this.props.match.params.invId,
+      this.props.match.params.itemId
+    );
     toast.success("Item deleted");
     this.props.history.push(`/myinventories/${this.props.match.params.invId}`);
   };
@@ -72,73 +77,76 @@ class AddEditSpecs extends React.Component {
     return (
       <>
         <section className="Inventories">
-          <h3>
-            Add/Edit Specifications to <em>{designation}</em>
-          </h3>
-          <form onSubmit={this.handleFormSubmit} encType="multipart/form-data">
-            <div className="Longfill">
-              <label>Item</label>
-              <input
-                type="text"
-                onChange={this.handleChange}
-                name="designation"
-                value={designation}
-              />
-            </div>
-            <div className="Longfill">
-              <label>Category</label>
-              <input
-                type="text"
-                onChange={this.handleChange}
-                name="category"
-                value={category}
-              />
-            </div>
-            <div className="Longfill">
-              <label>Quantity</label>
-              <input
-                type="number"
-                onChange={this.handleChange}
-                name="quantity"
-                value={quantity}
-              />
-            </div>
-            <div className="Longfill">
-              <label>Description</label>
-              <input
-                type="text"
-                onChange={this.handleChange}
-                name="description"
-                value={description}
-              />
-            </div>
-            <div className="Longfill">
-              <label>Location</label>
-              <input
-                type="text"
-                onChange={this.handleChange}
-                name="location"
-                value={location}
-              />
-            </div>
-            <div className="Longfill">
-              <label>Image</label>
-              <input
-                type="file"
-                name="image"
-                onChange={this.handleChangeFile}
-              />
-            </div>
-            <div>
-              <button className="Butts" type="submit">
-                Add/Edit
-              </button>
-            </div>
-          </form>
-          <div className="Twinbutts">
-            <button className="Delbutts" onClick={this.handleDeleteItem}>
-              Delete
-            </button>
+          <div className="AddLongForm">
+            <h3>
+              Add Specifications to <em>{designation}</em>
+            </h3>
+            <form
+              onSubmit={this.handleFormSubmit}
+              encType="multipart/form-data"
+            >
+              <div className="Fill">
+                <label>Item</label>
+                <input
+                  type="text"
+                  onChange={this.handleChange}
+                  name="designation"
+                  value={designation}
+                />
+              </div>
+              <div className="Fill">
+                <label>Category</label>
+                <input
+                  type="text"
+                  onChange={this.handleChange}
+                  name="category"
+                  value={category}
+                />
+              </div>
+              <div className="Longfill">
+                <label>Quantity</label>
+                <input
+                  type="number"
+                  onChange={this.handleChange}
+                  name="quantity"
+                  value={quantity}
+                />
+              </div>
+              <div className="Longfill">
+                <label>Description</label>
+                <input
+                  type="text"
+                  onChange={this.handleChange}
+                  name="description"
+                  value={description}
+                />
+              </div>
+              <div className="Longfill">
+                <label>Location</label>
+                <input
+                  type="text"
+                  onChange={this.handleChange}
+                  name="location"
+                  value={location}
+                />
+              </div>
+              <div className="Longfill">
+                <label>Image</label>
+                <input
+                  type="file"
+                  name="image"
+                  onChange={this.handleChangeFile}
+                />
+              </div>
+              <div className="Longformbutt">
+                <button className="Butts" type="submit">
+                  Add
+                </button> <button className="Butts" onClick={this.handleDeleteItem}>
+                  Delete
+                </button>
+              </div>
+
+            </form>
           </div>
         </section>
       </>

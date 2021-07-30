@@ -64,7 +64,7 @@ class CreateItem extends React.Component {
               />
             </div>
             
-            <div className="Buttsdiv">
+            <div className="Formbutt">
               <button className="butts" type="submit">
                 Add Item
               </button>
