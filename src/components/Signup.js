@@ -36,7 +36,7 @@ class Signup extends React.Component {
               <form onSubmit={this.handleFormSubmit}>
                 <div className="Add">
                   <label>Username</label>
-                  <input
+                  <input 
                     type="text"
                     name="username"
                     onChange={this.handleChange}
