@@ -138,14 +138,21 @@ label {
 
 .TextBox1 {
   text-align: justify;
-  padding: 0 15% 0 15%;
+  padding: 0 10% 0 10%;
   margin: 0 5% 5% 5%;
 }
 
 .TextBox2 {
   margin: 5%;
   text-align: justify;
-  padding: 0 30% 0 30%;
+  padding: 0 20% 0 20%;
+}
+
+footer {
+  margin-top: 12%;
+  font-size: 70%;
+  padding: 1%;
+  position: relative;
 }
 
 .Howto {
