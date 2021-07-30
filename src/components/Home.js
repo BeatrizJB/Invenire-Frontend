@@ -24,15 +24,17 @@ function Home() {
               </em>
             </p>
             <p className="TextBox2">
-              An app based on the concept of inventory creation, Invenire. The
-              objective is to make it easier for everyone to organise their
-              life, using this app to keep track of their possessions.
+              An app based on the concept of inventory creation, Invenire. If
+              you have a storage unit, or a home with either an attic/basement,
+              if you want to downsize or just keep track of your possessions,
+              Invenire makes it easier. Create an inventory with infinite items,
+              and access those items to give them more information if needed.
             </p>
           </article>
         </div>
-        <footer>Created by <a href="https://github.com/BeatrizJB">
-                BJB
-              </a></footer>
+        <footer>
+          Created by <a href="https://github.com/BeatrizJB">BJB</a>
+        </footer>
       </section>
     </>
   );
