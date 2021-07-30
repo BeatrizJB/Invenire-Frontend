@@ -173,25 +173,42 @@ footer {
 
 /* BUTTONS BEGIN --------------------------------------- */
 
-button {
-  margin-top: 10%;
-  margin-left: 1%;
-  margin-right: 1%;
-  padding: 5%;
-  width: 50%;
-  height: 15%;
-  border-radius: 50%;
+.File-input {
+display: block;
+position: relative;
+width: 200px;
+height: 50px;
+border-radius: 25px;
+background: transparent;
+border: 1px solid #b3b4c1 !important;
+display: flex;
+align-items: center;
+justify-content:left;
+color: black !important;
+cursor: pointer;
+transition: transform .2s ease-out;
+margin-top: 15px;
+padding-left: 15px;
+
+  
 }
 
 .Butts {
-  background: grey;
-  border: 1px solid grey !important;
+  background: #b3b4c1;
+  border: 1px solid #b3b4c1 !important;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   cursor: pointer;
   transition: transform .2s ease-out;
+    margin-top: 10%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 5%;
+    width: 50%;
+    height: 15%;
+    border-radius: 50%;
 }
 
 .Butts:hover {

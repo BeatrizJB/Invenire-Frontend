@@ -131,12 +131,13 @@ class AddEditSpecs extends React.Component {
                 />
               </div>
               <div className="Longfill">
+              
                 <label>Image</label>
-                <input
+                <div className= "File-input"><input
                   type="file"
                   name="image"
                   onChange={this.handleChangeFile}
-                />
+                /></div>
               </div>
               <div className="Longformbutt">
                 <button className="Butts" type="submit">
