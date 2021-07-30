@@ -38,30 +38,35 @@ class EditInventory extends React.Component {
     const { title } = this.state;
     return (
       <>
-        <section className="Edittitle1">
-          <h3>Edit Inventory</h3>
+        <section className="Inventories">
+          <div className="Addform">
+            <h2>Edit Inventory</h2>
 
-          <form onSubmit={this.handleFormSubmit}>
-            <div className="Edittitle2">
-              <label>Title</label>
-              <input
-                type="text"
-                onChange={this.handleChange}
-                name="title"
-                value={title}
-              />
-            </div>
+            <form onSubmit={this.handleFormSubmit}>
+              <div className="Fill">
+                <label>Title</label>
+                <input
+                  type="text"
+                  onChange={this.handleChange}
+                  name="title"
+                  value={title}
+                />
+              </div>
 
-            <div className="Twinbutts">
-              <button className="Butts" type="submit">
-                Edit
-              </button>
+              <div className="Twinbutts">
+                <button className="Butts" type="submit">
+                  Edit
+                </button>
 
-              <button className="Delbutts" onClick={this.handleDeleteInventory}>
-                Delete
-              </button>
-            </div>
-          </form>
+                <button
+                  className="Delbutts"
+                  onClick={this.handleDeleteInventory}
+                >
+                  Delete
+                </button>
+              </div>
+            </form>
+          </div>
         </section>
       </>
     );

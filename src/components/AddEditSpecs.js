@@ -15,16 +15,15 @@ class AddEditSpecs extends React.Component {
 
   async componentDidMount() {
     const response = await inventory(this.props.match.params.invId);
-    console.log(response.data.listItems);
      const item = response.data.listItems.filter((item) => item._id === this.props.match.params.itemId);
-     console.log(item);
+     
      this.setState({
       designation: item[0].designation,
     });
   }
   handleDeleteItem = async () => {
     await deleteItem(this.props.match.params.invId, this.props.match.params.itemId);
-    toast.success("Inventory deleted.");
+    toast.success("Item deleted");
     this.props.history.push(`/myinventories/${this.props.match.params.invId}`);
   };
 
@@ -57,8 +56,8 @@ class AddEditSpecs extends React.Component {
       specs
     );
     // console.log(newInv);
-    toast.success("Specs added/edited");
-    this.props.history.push("/myinventories/:invId");
+    toast.success("Specs added");
+    this.props.history.push(`/myinventories/${this.props.match.params.invId}`);
   };
 
   handleChangeFile = (event) => {
@@ -72,7 +71,7 @@ class AddEditSpecs extends React.Component {
       this.state;
     return (
       <>
-        <section className="Bigform">
+        <section className="Inventories">
           <h3>
             Add/Edit Specifications to <em>{designation}</em>
           </h3>

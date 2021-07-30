@@ -30,10 +30,9 @@ class Inventory extends React.Component {
     const item = {
       designation: this.state.designation,
     };
-    console.log(item);
     await createItem(this.props.match.params.invId, item);
 
-    this.props.history.push(`/myinventories/${this.props.match.params.invId}`);
+    // this.props.history.push(`/myinventories/${this.props.match.params.invId}`);
   };
 
   render() {
@@ -76,7 +75,7 @@ class Inventory extends React.Component {
               {listItems.map((item) => {
                 return (
                   <>
-                    <div className="Invs-body">
+                    <div className="Inv-body">
                       <h4>
                         <NavLink
                           to={`/myinventories/${this.props.match.params.invId}/itemspecs/${item._id}`}
@@ -84,11 +83,11 @@ class Inventory extends React.Component {
                           {item.designation}
                         </NavLink>
                       </h4>
-                      <p>Category {item.category}</p>
-                      <p>Quantity {item.quantity}</p>
-                      <p>Description {item.description}</p>
-                      <p>Location {item.location}</p>
-                      <img className="Invpic" src={item.imageUrl} />
+                      <p>{item.category}</p>
+                      <p>{item.quantity}</p>
+                      <p>{item.description}</p>
+                      <p>{item.location}</p>
+                      <img className="Invpic" src={item.imageUrl} alt="" />
                     </div>
                   </>
                 );

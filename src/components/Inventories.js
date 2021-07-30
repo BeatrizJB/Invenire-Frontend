@@ -29,7 +29,7 @@ class Inventories extends React.Component {
                         {inv.title}
                       </NavLink>
                     </h2>
-                    <div className="Inv-body">
+                    <div className="Invs-body">
                       {inv.listItems.map((item) => {
                         return <p>{item.designation}</p>;
                       })}

@@ -42,7 +42,7 @@ ul {
 }
 
 img {
-  width: 25%;
+  width: 70%;
 }
 
 li {
@@ -114,9 +114,9 @@ li {
 
 .Bodycard {
   width: 60%;
-    box-shadow: 0 0 50px #ccc;
-    background-color: transparent;
-    border-radius: 1%;
+  box-shadow: 0 0 50px #ccc;
+  background-color: transparent;
+  border-radius: 1%;
     
 }
 
@@ -251,7 +251,7 @@ li {
 
 /* INV BEGIN ---------------------------------------*/
 
-.Bigform {
+/* .Bigform {
   width: 80%;
   height: 80%;
   display: flex;
@@ -260,26 +260,26 @@ li {
   justify-items: center;
   align-items: center;
   margin-top: 2%;
-}
+} */
 
 .Longfill {
-    width: 100%;
-    height: 20%;
-    padding-top: 10%;
-    margin-bottom: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  height: 20%;
+  padding-top: 10%;
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .Longfill label {
   padding-bottom: 1%;
 }
 
-.Bigform button {
+/* .Bigform button {
   margin-top: 20%;
   margin-bottom: 5%;
-}
+} */
 
 .Addform{
   width: 80%;
@@ -351,16 +351,16 @@ li {
 /* INVENTORIES+ INVENTORY COMPONENT*/
 .Inventories {
   width: 100%; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: flex-start;
     
 }
 
 .Inventory {
-  width: 70%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -371,6 +371,7 @@ li {
   border-radius: 1%;
   margin-top: 10%;
   margin-bottom: 10%;
+
 }
 
 .Invs-all {
@@ -380,27 +381,38 @@ li {
  justify-content: space-evenly;
  align-items: baseline;
  align-content: flex-start;
+
 }
 
 .Sing-inv {
   width: 100%;
-      display: flex;      
-      flex-direction: row;
-      justify-content: space-evenly;
-      align-items: baseline;
-      align-content: flex-start;
-      color: dimgrey;
+  display: flex;      
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: baseline;
+  align-content: flex-start;
+  color: dimgrey;
+  border-radius: 1%;
 }
 
 .Inv-card {
   margin: 1%;
-  width: 10%;
+  width: 20%;
   box-shadow: 0 0 50px #ccc;
   background-color: transparent;
   border-radius: 1%;
+
 }
 
+.Invs-body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .Inv-body {
+  width: 60%;
   display: flex;
   flex-direction: column ;
   justify-content: center;
